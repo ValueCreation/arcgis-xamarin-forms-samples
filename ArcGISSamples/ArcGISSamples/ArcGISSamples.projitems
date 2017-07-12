@@ -15,6 +15,27 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MapsListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Maps\DisplayMapPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LayersListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Layers\DisplayOsmMapPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Layers\DisplayWMTSServicePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Layers\FeatureLayerLabelConfiguration.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Layers\WebTiledLayerPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -24,5 +45,33 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MapsListPage.xaml.cs">
+      <DependentUpon>MapsListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Maps\DisplayMapPage.xaml.cs">
+      <DependentUpon>DisplayMapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MapsListPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\LayersListPage.xaml.cs">
+      <DependentUpon>LayersListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LayersListPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Layers\DisplayOsmMapPage.xaml.cs">
+      <DependentUpon>DisplayOsmMapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Layers\DisplayWMTSMServicePage.xaml.cs">
+      <DependentUpon>DisplayWMTSServicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Layers\FeatureLayerLabelConfiguration.xaml.cs">
+      <DependentUpon>FeatureLayerLabelConfiguration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Layers\WebTiledLayerPage.xaml.cs">
+      <DependentUpon>WebTiledLayerPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Maps\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\MapView\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Layers\" />
   </ItemGroup>
 </Project>

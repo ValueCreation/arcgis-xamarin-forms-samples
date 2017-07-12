@@ -17,8 +17,23 @@ namespace ArcGISSamples.ViewModels
 			set { SetProperty(ref _title, value); }
 		}
 
-		public MainPageViewModel()
+		private readonly INavigationService _navigationService;
+		public ICommand NavigateMapsListPageCommand { get; }
+        public ICommand NavigateLayersListPageCommand { get; }
+          
+		public MainPageViewModel(INavigationService navigationService)
 		{
+			_navigationService = navigationService;
+
+			NavigateMapsListPageCommand = new DelegateCommand(() =>
+			{
+				_navigationService.NavigateAsync("MapsListPage");
+			});
+
+			NavigateLayersListPageCommand = new DelegateCommand(() =>
+            {
+	            _navigationService.NavigateAsync("LayersListPage");
+            });
 
 		}
 

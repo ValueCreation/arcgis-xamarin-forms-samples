@@ -1,5 +1,6 @@
 ﻿using Prism.Unity;
 using ArcGISSamples.Views;
+using Xamarin.Forms;
 
 namespace ArcGISSamples
 {
@@ -11,12 +12,18 @@ namespace ArcGISSamples
 		{
 			InitializeComponent();
 
-			NavigationService.NavigateAsync("MainPage?title=Hello%20from%20Xamarin.Forms");
+			//NavigationService.NavigateAsync("MainPage?title=Hello%20from%20Xamarin.Forms");
+			NavigationService.NavigateAsync("NavigationPage/MainPage");
 		}
 
 		protected override void RegisterTypes()
 		{
+			Container.RegisterTypeForNavigation<NavigationPage>();
 			Container.RegisterTypeForNavigation<MainPage>();
+
+			Container.RegisterTypeForNavigation<MapsListPage>();
+            Container.RegisterTypeForNavigation<LayersListPage>();
+
 		}
 	}
 }

@@ -1,6 +1,63 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" prism:ViewModelLocator.AutowireViewModel="True" x:Class="ArcGISSamples.Views.MainPage" Title="MainPage">
-	<StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-		<Label Text="{Binding Title}" />
-	</StackLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
+    prism:ViewModelLocator.AutowireViewModel="True" 
+    x:Class="ArcGISSamples.Views.MainPage" 
+    Title="メインページ">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="plainButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#eee"/>
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="40" />
+            </Style>
+            <Style x:Key="darkerButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#ddd"/>
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="15" />
+            </Style>
+            <Style x:Key="orangeButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#E8AD00"/>
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="40" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        
+        <ScrollView>
+            
+        <Grid x:Name="controlGrid" RowSpacing="10" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="150" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />                  
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+                
+            <Label Text="0" Grid.Row="0" HorizontalTextAlignment="End" VerticalTextAlignment="End" TextColor="White" FontSize="10" Grid.ColumnSpan="2" />
+
+            <Button Text = "MAP" Grid.Row="1" Grid.Column="0" Command="{Binding NavigateMapsListPageCommand}" Style="{StaticResource darkerButton}" />
+            <Button Text = "LAYERS" Grid.Row="1" Grid.Column="1" Command="{Binding NavigateLayersListPageCommand}" Style="{StaticResource darkerButton}" />
+
+                
+            <Button Text = "" Grid.Row="5" Grid.Column="1"  />
+            
+        </Grid>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+
 </ContentPage>
