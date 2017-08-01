@@ -19,8 +19,6 @@ namespace ArcGISSamples.Views.Layers
 		private async void Initialize()
 		{
 
-			var WmtsUrl = new System.Uri("http://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png");
-
 			var templateUri = "https://cyberjapandata.gsi.go.jp/xyz/std/{level}/{col}/{row}.png";
 
 			//var templateUri = "https://{subDomain}.tile.stamen.com/terrain/{level}/{col}/{row}.png";
@@ -42,13 +40,10 @@ namespace ArcGISSamples.Views.Layers
 
                 MyMapView.Map = myMap;
 
+                var attribution = @"<a href=""http://maps.gsi.go.jp/development/ichiran.html"" target=""_blank"">地理院タイル</a>";
+				//var attribution = "<a href='http://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>";
 
-                   var test = ("Map tiles by <a href=\"http://stamen.com/\">Stamen Design</a>, " +
-							"under <a href=\"http://creativecommons.org/licenses/by/3.0\">CC BY 3.0</a>. " +
-							"Data by <a href=\"http://openstreetmap.org/\">OpenStreetMap</a>, " +
-							"under <a href=\"http://creativecommons.org/licenses/by-sa/3.0\">CC BY SA</a>.");
-                //var attribution = @"<a href=""http://maps.gsi.go.jp/development/ichiran.html"" target=""_blank"">地理院タイル</a>";
-                webTiledLayer.Attribution = test;
+                webTiledLayer.Attribution = attribution;
 
             }
             else

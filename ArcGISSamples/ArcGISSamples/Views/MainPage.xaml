@@ -42,14 +42,17 @@
                 <RowDefinition Height="150" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />                  
+                <ColumnDefinition Width="5" />                  
                 <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />                  
+                <ColumnDefinition Width="5" />
             </Grid.ColumnDefinitions>
                 
             <Label Text="0" Grid.Row="0" HorizontalTextAlignment="End" VerticalTextAlignment="End" TextColor="White" FontSize="10" Grid.ColumnSpan="2" />
 
-            <Button Text = "MAP" Grid.Row="1" Grid.Column="0" Command="{Binding NavigateMapsListPageCommand}" Style="{StaticResource darkerButton}" />
-            <Button Text = "LAYERS" Grid.Row="1" Grid.Column="1" Command="{Binding NavigateLayersListPageCommand}" Style="{StaticResource darkerButton}" />
+            <Button Text = "MAP" Grid.Row="1" Grid.Column="1" Command="{Binding NavigateMapsListPageCommand}" Style="{StaticResource darkerButton}" />
+            <Button Text = "LAYERS" Grid.Row="1" Grid.Column="2" Command="{Binding NavigateLayersListPageCommand}" Style="{StaticResource darkerButton}" />
+            <Button Text = "SYMBOLOGY" Grid.Row="2" Grid.Column="1" Command="{Binding NavigateSymbologyListPageCommand}" Style="{StaticResource darkerButton}" />
 
                 
             <Button Text = "" Grid.Row="5" Grid.Column="1"  />

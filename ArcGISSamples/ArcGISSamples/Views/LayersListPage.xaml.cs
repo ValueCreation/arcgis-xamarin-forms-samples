@@ -43,6 +43,14 @@ namespace ArcGISSamples.Views
 			};
 			webTiledLayerButton.Clicked += OnWebTiledLayerButtonClicked;
 
+			var bingMapLayerButton = new Button
+			{
+				Text = "BingMapLayer",
+				HorizontalOptions = LayoutOptions.FillAndExpand,
+				BackgroundColor = Color.FromHex("ECECEC")
+			};
+			bingMapLayerButton.Clicked += OnBingMapLayerButtonClicked;
+
 
 			Content = new StackLayout
 			{
@@ -51,7 +59,8 @@ namespace ArcGISSamples.Views
 					displayOsmButton,
 					wmtsServiceButton,
                     featureLayerLabelButton,
-                    webTiledLayerButton
+                    webTiledLayerButton,
+                    bingMapLayerButton
 				}
 			};        
         
@@ -76,5 +85,11 @@ namespace ArcGISSamples.Views
 		{
             await Navigation.PushAsync(new Layers.WebTiledLayerPage());
 		}
+
+		async void OnBingMapLayerButtonClicked(object sender, EventArgs e)
+		{
+            await Navigation.PushAsync(new Layers.BingMapsLayerPage());
+		}
+
 	}
 }

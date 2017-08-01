@@ -36,6 +36,15 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Layers\WebTiledLayerPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Layers\BingMapsLayerPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SymbologyListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Symbology\HeatmapRendererMyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -68,10 +77,20 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Layers\WebTiledLayerPage.xaml.cs">
       <DependentUpon>WebTiledLayerPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Layers\BingMapsLayerPage.xaml.cs">
+      <DependentUpon>BingMapsLayerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\SymbologyListPage.xaml.cs">
+      <DependentUpon>SymbologyListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Symbology\HeatmapRendererMyPage.xaml.cs">
+      <DependentUpon>HeatmapRendererMyPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\Maps\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\MapView\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\Layers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Symbology\" />
   </ItemGroup>
 </Project>

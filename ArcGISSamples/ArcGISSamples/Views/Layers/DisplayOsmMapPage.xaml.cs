@@ -12,7 +12,7 @@ namespace ArcGISSamples.Views.Layers
         {
             InitializeComponent();
 
-             Initialize();
+            Initialize();
 		}
 
 		private void Initialize()

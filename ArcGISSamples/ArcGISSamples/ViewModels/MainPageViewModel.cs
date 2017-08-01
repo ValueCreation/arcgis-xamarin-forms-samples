@@ -20,7 +20,8 @@ namespace ArcGISSamples.ViewModels
 		private readonly INavigationService _navigationService;
 		public ICommand NavigateMapsListPageCommand { get; }
         public ICommand NavigateLayersListPageCommand { get; }
-          
+		public ICommand NavigateSymbologyListPageCommand { get; }
+
 		public MainPageViewModel(INavigationService navigationService)
 		{
 			_navigationService = navigationService;
@@ -35,6 +36,10 @@ namespace ArcGISSamples.ViewModels
 	            _navigationService.NavigateAsync("LayersListPage");
             });
 
+			NavigateSymbologyListPageCommand = new DelegateCommand(() =>
+			{
+				_navigationService.NavigateAsync("SymbologyListPage");
+			});
 		}
 
 		public void OnNavigatedFrom(NavigationParameters parameters)
