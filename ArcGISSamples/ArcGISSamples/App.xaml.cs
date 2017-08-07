@@ -24,7 +24,8 @@ namespace ArcGISSamples
 			Container.RegisterTypeForNavigation<MapsListPage>();
             Container.RegisterTypeForNavigation<LayersListPage>();
             Container.RegisterTypeForNavigation<SymbologyListPage>();
-
+			Container.RegisterTypeForNavigation<DataListPage>();
+            Container.RegisterTypeForNavigation<TaskListPage>();
 		}
 	}
 }

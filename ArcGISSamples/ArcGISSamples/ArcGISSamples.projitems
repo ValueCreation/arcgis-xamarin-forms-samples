@@ -45,6 +45,18 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Symbology\HeatmapRendererMyPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DataListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Data\GetRelateFeaturesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TaskListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Task\POISearchPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -86,11 +98,25 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Symbology\HeatmapRendererMyPage.xaml.cs">
       <DependentUpon>HeatmapRendererMyPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DataListPage.xaml.cs">
+      <DependentUpon>DataListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Data\GetRelateFeaturesPage.xaml.cs">
+      <DependentUpon>GetRelateFeaturesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TaskListPage.xaml.cs">
+      <DependentUpon>TaskListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Task\POISearchPage.xaml.cs">
+      <DependentUpon>POISearchPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\Maps\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\MapView\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\Layers\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\Symbology\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Data\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Task\" />
   </ItemGroup>
 </Project>

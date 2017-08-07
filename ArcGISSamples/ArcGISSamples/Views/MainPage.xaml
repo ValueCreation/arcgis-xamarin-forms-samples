@@ -53,7 +53,10 @@
             <Button Text = "MAP" Grid.Row="1" Grid.Column="1" Command="{Binding NavigateMapsListPageCommand}" Style="{StaticResource darkerButton}" />
             <Button Text = "LAYERS" Grid.Row="1" Grid.Column="2" Command="{Binding NavigateLayersListPageCommand}" Style="{StaticResource darkerButton}" />
             <Button Text = "SYMBOLOGY" Grid.Row="2" Grid.Column="1" Command="{Binding NavigateSymbologyListPageCommand}" Style="{StaticResource darkerButton}" />
+            <Button Text = "DATA" Grid.Row="2" Grid.Column="2" Command="{Binding NavigateDataListPageCommand}" Style="{StaticResource darkerButton}" />
 
+            <Button Text = "TASK" Grid.Row="3" Grid.Column="1" Command="{Binding NavigateTaskListPageCommand}" Style="{StaticResource darkerButton}" />
+                
                 
             <Button Text = "" Grid.Row="5" Grid.Column="1"  />
             

@@ -21,6 +21,8 @@ namespace ArcGISSamples.ViewModels
 		public ICommand NavigateMapsListPageCommand { get; }
         public ICommand NavigateLayersListPageCommand { get; }
 		public ICommand NavigateSymbologyListPageCommand { get; }
+		public ICommand NavigateDataListPageCommand { get; }
+		public ICommand NavigateTaskListPageCommand { get; }
 
 		public MainPageViewModel(INavigationService navigationService)
 		{
@@ -39,6 +41,16 @@ namespace ArcGISSamples.ViewModels
 			NavigateSymbologyListPageCommand = new DelegateCommand(() =>
 			{
 				_navigationService.NavigateAsync("SymbologyListPage");
+			});
+
+			NavigateDataListPageCommand = new DelegateCommand(() =>
+            {
+	            _navigationService.NavigateAsync("DataListPage");
+            });
+
+			NavigateTaskListPageCommand = new DelegateCommand(() =>
+			{
+				_navigationService.NavigateAsync("TaskListPage");
 			});
 		}
 
