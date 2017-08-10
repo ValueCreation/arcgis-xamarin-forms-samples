@@ -19,11 +19,21 @@ namespace ArcGISSamples.Views
 			};
 			getRelateFeaturesButton.Clicked += OnGetRelateFeaturesButtonButtonClicked;
 
+			var searchFeatureTableButton = new Button
+			{
+				Text = "フィーチャーの属性検索",
+				HorizontalOptions = LayoutOptions.FillAndExpand,
+				BackgroundColor = Color.FromHex("ECECEC")
+			};
+			searchFeatureTableButton.Clicked += OnSearchFeatureTableButtonClicked;
+
+
 			Content = new StackLayout
 			{
 				Margin = new Thickness(0, 20, 0, 0),
 				Children = {
-					getRelateFeaturesButton
+					getRelateFeaturesButton,
+                    searchFeatureTableButton
 				}
 			};
 
@@ -34,5 +44,10 @@ namespace ArcGISSamples.Views
             await Navigation.PushAsync(new Data.GetRelateFeaturesPage());
 		}
 
-    }
+		async void OnSearchFeatureTableButtonClicked(object sender, EventArgs e)
+		{
+            await Navigation.PushAsync(new Data.SearchFeatureTablePage());
+		}
+
+	}
 }

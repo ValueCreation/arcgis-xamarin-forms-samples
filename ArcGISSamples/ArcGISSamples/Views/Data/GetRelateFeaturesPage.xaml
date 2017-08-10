@@ -13,9 +13,6 @@
       <RowDefinition Height="30"/>
       <RowDefinition/>
     </Grid.RowDefinitions>
-        
-
-
 
 
     <StackLayout x:Name="SecureLayerStatusPanel"

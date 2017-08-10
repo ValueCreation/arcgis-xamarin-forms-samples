@@ -57,6 +57,21 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Task\POISearchPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Task\FindAddressPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\PictureMarkerSymbols\pin_star_blue.png">
+      <LogicalName>ArcGISSamples.Resources.PictureMarkerSymbols.pin_star_blue.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Task\ReverseGeocodePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Data\SearchFeatureTablePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Layers\FeatureLayerFilterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -110,6 +125,18 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Task\POISearchPage.xaml.cs">
       <DependentUpon>POISearchPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Task\FindAddressPage.xaml.cs">
+      <DependentUpon>FindAddressPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Task\ReverseGeocodePage.xaml.cs">
+      <DependentUpon>ReverseGeocodePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Data\SearchFeatureTablePage.xaml.cs">
+      <DependentUpon>SearchFeatureTablePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Layers\FeatureLayerFilterPage.xaml.cs">
+      <DependentUpon>FeatureLayerFilterPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\Maps\" />
@@ -118,5 +145,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Views\Symbology\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\Data\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\Task\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\PictureMarkerSymbols\" />
   </ItemGroup>
 </Project>

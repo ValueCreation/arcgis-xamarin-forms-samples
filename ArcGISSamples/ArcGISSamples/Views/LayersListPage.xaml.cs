@@ -29,7 +29,7 @@ namespace ArcGISSamples.Views
 
             var featureLayerLabelButton = new Button
 			{
-				Text = "FeatureLayer Label",
+				Text = "フィーチャ レイヤーのラベル設定",
 				HorizontalOptions = LayoutOptions.FillAndExpand,
 				BackgroundColor = Color.FromHex("ECECEC")
 			};
@@ -51,6 +51,14 @@ namespace ArcGISSamples.Views
 			};
 			bingMapLayerButton.Clicked += OnBingMapLayerButtonClicked;
 
+			var FeatureLayerFilterButton = new Button
+			{
+				Text = "フィーチャのフィルタ設定",
+				HorizontalOptions = LayoutOptions.FillAndExpand,
+				BackgroundColor = Color.FromHex("ECECEC")
+			};
+			FeatureLayerFilterButton.Clicked += OnFeatureLayerFilterButtonClicked;
+
 
 			Content = new StackLayout
 			{
@@ -60,7 +68,8 @@ namespace ArcGISSamples.Views
 					wmtsServiceButton,
                     featureLayerLabelButton,
                     webTiledLayerButton,
-                    bingMapLayerButton
+                    bingMapLayerButton,
+                    FeatureLayerFilterButton
 				}
 			};        
         
@@ -91,5 +100,11 @@ namespace ArcGISSamples.Views
             await Navigation.PushAsync(new Layers.BingMapsLayerPage());
 		}
 
+		async void OnFeatureLayerFilterButtonClicked(object sender, EventArgs e)
+		{
+            await Navigation.PushAsync(new Layers.FeatureLayerFilterPage());
+		}
+
+		
 	}
 }

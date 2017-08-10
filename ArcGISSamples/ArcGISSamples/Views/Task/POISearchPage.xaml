@@ -7,7 +7,20 @@
     Title="POIの検索">
 
     <Grid>
-        <esriUI:MapView x:Name="MyMapView"/>
-    </Grid>
+        
+    <Grid.RowDefinitions>
+      <RowDefinition Height="25" />         
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+        
+    <StackLayout Orientation="Vertical" Grid.Row="1">
+      <Entry x:Name="addressTextBox" Text="東京タワー" />
+      <Button x:Name="geocoording" Text=" 検索 " Clicked="geocoording_Click" />
+    </StackLayout>
+        
+    <esriUI:MapView x:Name="MyMapView" Grid.Row="2"/>
 
+    </Grid>
+    
 </ContentPage>
